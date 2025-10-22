@@ -5,7 +5,7 @@ import Logo from "@/public/Logo.png";
 
 function About() {
   return (
-    <div id="about" className='about'>
+    <div id="about sections" className='about'>
       <h1 className='text-center font-bold text-2xl'>About</h1>
       <p className='text-center'>
         Lorem ipsum dolor sit amet consectetur.

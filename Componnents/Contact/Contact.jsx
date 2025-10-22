@@ -31,7 +31,7 @@ function Contact() {
   }
 
   return (
-    <div id="contact" className='contact'>
+    <div id="contact sections" className='contact'>
       <h1 className='text-2xl text-center font-bold'>Contact</h1>
       <p className='text-center'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, esse!</p>
       <div className="contact-me">

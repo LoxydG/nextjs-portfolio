@@ -20,7 +20,7 @@ function Hero() {
     return () => clearInterval(interval);
   },[jobs.length])
   return (
-    <div id="hero" className="hero">
+    <div id="hero sections" className="hero">
       <div className="hero-content">
         <Image style={{width:70, margin: "0 auto", borderRadius: "50%", marginBottom: 10}} src={Logo}/>
         <p style={

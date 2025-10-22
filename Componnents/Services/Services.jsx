@@ -3,7 +3,7 @@ import "./Services.css"
 
 function Services() {
   return (
-    <div id='services' className='services'>
+    <div id='services sections' className='services'>
       <h1 className='text-center font-bold text-2xl'>Services</h1>
       <p className='text-center'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, esse!</p>
       <div className="service-rows">

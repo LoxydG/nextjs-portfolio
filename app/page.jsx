@@ -19,6 +19,22 @@ export default function Home() {
       setScrollY(window.scrollY);
       setIsShowBtn(window.scrollY > 400);
     };
+    const elements = document.querySelectorAll('.sections');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+          entry.target.style.visibilty = 'visible';
+          observer.unobserve(entry.target);
+        } else {
+          entry.target.classList.remove('in-view');
+          entry.target.style.visibilty = 'hidden';
+        }
+      })
+    }, { threshold: 0.2, rootMargin: "0px 0px -100px 0px" });
+    elements.forEach((el) => observer.observe(el));
+    return () => observer.disconnect();
+
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);

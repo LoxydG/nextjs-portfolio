@@ -31,7 +31,7 @@ function Projects() {
   ]
 
   return (
-    <div id='projects' className='Projects'>
+    <div id='projects sections' className='Projects'>
       <h1 className='text-2xl text-center font-bold'>Projects</h1>
       <p className='text-center'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, esse!</p>
       <div className="project-rows">
