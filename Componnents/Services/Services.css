@@ -42,4 +42,9 @@
         flex-direction: column;
         margin: 0 2em;
     }
+
+    .service-rows .rows{
+        margin: 2em;
+        width: 90%;
+    }
 }
