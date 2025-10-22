@@ -1,0 +1,39 @@
+@import "tailwindcss";
+/* globals.css أو styles.css */
+*{
+  padding: 0%;
+  margin: 0%;
+  outline: none;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+.background{
+  background: linear-gradient(to left,#fff,#fefefe,#fdfdfd);
+}
+
+.up{
+  border: none;
+  margin: 20px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(238, 238, 238, 0.603)0f0;
+  padding: 10px 12px;
+  border-radius: 50%;
+  box-shadow: 0 0 5px black;
+}
+
+.opacity-black{
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+@media (max-width:600px){
+  .up{
+    display: none;
+  }
+}

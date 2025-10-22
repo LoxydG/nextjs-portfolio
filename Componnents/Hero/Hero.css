@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+.hero{
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    min-height: 100vh;
+}
+
+.link1{ 
+    background: black;
+    color: white; 
+    transition: all .4s ease;
+}
+
+.link2{
+    border: 2px solid black;
+    transition: all .4s ease;
+}
+
+.link1:hover{
+    background-color: dodgerblue;
+    color: black;
+}
+
+.link2:hover{
+    background-color: black;
+    color: white;
+}
+
+.links{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    font-size: 25px;
+    margin-top: 1rem;
+}
+.links a{
+    transition: color .4s ease, transform .4s ease;
+}
+.links a:hover{
+    color: dodgerblue;
+    transform: scale(0.97);
+}
+
+@media (max-width:800px){
+    .hero{
+        flex-direction: column;
+        text-align: center;
+        padding: 0 1rem;
+    }
+
+}

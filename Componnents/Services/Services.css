@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+.service-rows{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin: 0 50px;
+    min-height: 95vh;
+}
+.service-rows .rows{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.555);
+    box-shadow: 0 2px 7px rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+.service-rows .rows:hover{
+    transform: translateY(-6px);
+}
+
+.rows .icon{
+    font-size: 8rem;
+    text-align: center;
+}
+.rows p{
+    margin: 15px;
+}
+
+@media (max-width:768px){
+    .services {
+        margin: 2em 0;
+    }
+    .services p{
+        margin-bottom: 4em;
+    }
+
+    .service-rows{
+        flex-direction: column;
+        margin: 0 2em;
+    }
+}
