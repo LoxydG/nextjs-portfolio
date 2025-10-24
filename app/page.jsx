@@ -2,12 +2,12 @@
 import "./globals.css";
 import { useState, useEffect, useContext } from "react";
 import { NavToHeroContext } from "@/contextData/NavToHeroContext";
-import Navigation from "@/Componnents/Navigation/Navigation";
-import Hero from "@/Componnents/Hero/Hero";
-import About from "@/Componnents/About/About";
-import Services from "@/Componnents/Services/Services";
-import Projects from "@/Componnents/Projects/Projects";
-import Contact from "@/Componnents/Contact/Contact";
+import Navigation from "@/app/Componnents/Navigation/Navigation";
+import Hero from "@/app/Componnents/Hero/Hero";
+import About from "@/app/Componnents/About/About";
+import Services from "@/app/Componnents/Services/Services";
+import Projects from "@/app/Componnents/Projects/Projects";
+import Contact from "@/app/Componnents/Contact/Contact";
 
 export default function Home() {
   const [scrollY, setScrollY] = useState(0);
@@ -19,27 +19,6 @@ export default function Home() {
       setScrollY(window.scrollY);
       setIsShowBtn(window.scrollY > 400);
     };
-
-    // إنشاء الـ observer
-    const elements = document.querySelectorAll(".sections");
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("in-view");
-            entry.target.style.visibility = "visible"; // تصحيح الكتابة
-            observer.unobserve(entry.target);
-          } else {
-            entry.target.classList.remove("in-view");
-            entry.target.style.visibility = "hidden";
-          }
-        });
-      },
-      { threshold: 0.2, rootMargin: "0px 0px -100px 0px" }
-    );
-
-    // ابدأ المراقبة
-    elements.forEach((el) => observer.observe(el));
 
     // سجّل مستمع الـ scroll
     window.addEventListener("scroll", handleScroll, { passive: true });
