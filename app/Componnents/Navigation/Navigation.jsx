@@ -12,6 +12,7 @@ function Navigation() {
   function handleMenuClick() {
     setIsShowMenu(!isShowMenu);
     setChangeMenu(isShowMenu ? "fa-solid fa-bars" : "fa-solid fa-xmark");
+
   }
 
   useEffect(() => {
@@ -22,6 +23,11 @@ function Navigation() {
         setChangeMenu("fa-solid fa-bars");
       });
     });
+
+    const menuIcon = document.querySelector(".mobile-menu i");
+    menuIcon.style.transition = "all 0.3s ease-in-out";
+    menuIcon.setAttribute("aria-expanded", isShowMenu);
+
 
     const menu = document.querySelector(".menu");
     menu.classList.toggle("show");
